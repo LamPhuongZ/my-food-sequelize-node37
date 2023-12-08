@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "9baed76a-66df-4aa3-a56d-dc4e85854222",
+		"name": "node37_food",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27807951"
+	},
+	"item": [
+		{
+			"name": "like",
+			"item": [
+				{
+					"name": "like-restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 6,\r\n    \"res_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/like/like-restaurant",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"like",
+								"like-restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-list-like-by-res",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}like/get-list-like-by-res/1",
+							"host": [
+								"{{domain}}like"
+							],
+							"path": [
+								"get-list-like-by-res",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-list-like-by-user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}like/get-list-like-by-user/1",
+							"host": [
+								"{{domain}}like"
+							],
+							"path": [
+								"get-list-like-by-user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dislike-restaurant",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}like/unlike-restaurant/6/3",
+							"host": [
+								"{{domain}}like"
+							],
+							"path": [
+								"unlike-restaurant",
+								"6",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rate",
+			"item": [
+				{
+					"name": "add-rate-res",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}rate/add-rate-res",
+							"host": [
+								"{{domain}}rate"
+							],
+							"path": [
+								"add-rate-res"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-rate-by-res",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{domain}}rate/get-rate-by-res/1",
+							"host": [
+								"{{domain}}rate"
+							],
+							"path": [
+								"get-rate-by-res",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-rate-by-user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{domain}}rate/get-rate-by-user/1",
+							"host": [
+								"{{domain}}rate"
+							],
+							"path": [
+								"get-rate-by-user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "add-order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"food_id\": 3,\r\n    \"amount\": 10,\r\n    \"code\": \"\",\r\n    \"arr_sub_id\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}order/add-order",
+							"host": [
+								"{{domain}}order"
+							],
+							"path": [
+								"add-order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "localhost:8080/"
+		}
+	]
+}
