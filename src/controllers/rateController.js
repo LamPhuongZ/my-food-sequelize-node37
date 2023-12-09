@@ -70,6 +70,7 @@ const getListRateByUser = async (req, res) => {
         where: {
           user_id,
         },
+        include: ["tblRate_res"],
       });
 
       responseData(res, "Successfully get list of rates by user", data, 200);
